@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>CakeManager Couscous</title>
+
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/highlight.dark.css">
+    <link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+
+    <header class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/">
+                    CakeManager Couscous
+                    <small class="hidden-xs hidden-sm">
+                        CakeManager Template for Couscous.
+                    </small>
+                </a>
+            </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                                                            <li class="">
+                        <a href="http://www.cakemanager.org" target="_blank">
+                            CakeManager
+                        </a>
+                    </li>
+                                                                                <li class="fa-icon">
+                        <a href="https://github.com/leoruhland/cakemanager-couscous" target="_blank">
+                            <i class="fa fa-github fa-2x"></i>
+                        </a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <main class="container-fluid">
+        <div class="row">
+
+            
+            <nav id="sidebar" class="col-sm-3 col-lg-2" role="navigation">
+
+                <ul class="nav nav-pills nav-stacked">
+                                        <li class="active">
+                        <a href="/" target="_self">
+                            Home page
+                        </a>
+                    </li>
+                                        <li class="">
+                        <a href="/" target="_self">
+                            Getting Started
+                        </a>
+                    </li>
+                                        <li class="">
+                        <a href="/" target="_self">
+                            Installation
+                        </a>
+                    </li>
+                                        <li class="">
+                        <a href="/" target="_self">
+                            Configuration
+                        </a>
+                    </li>
+                                        <li class="">
+                        <a href="/" target="_self">
+                            FAQ
+                        </a>
+                    </li>
+                                    </ul>
+
+            </nav>
+
+            
+            <section id="content" class="col-sm-offset-3 col-lg-offset-2 col-sm-9 col-lg-10">
+                <h1 id="cakemanager-couscous-template">CakeManager Couscous template</h1>
+<p><img src="screenshot.png" alt="" /></p>
+<h2 id="usage">Usage</h2>
+<p>To use the template, set it up in your <code>couscous.yml</code> configuration file:</p>
+<pre><code class="language-yaml">template:
+    url: https://github.com/leoruhland/cakemanager-couscous</code></pre>
+<h2 id="configuration">Configuration</h2>
+<p>Here are all the variables you can set in your <code>couscous.yml</code>:</p>
+<pre><code class="language-yaml"># Base URL of the published website
+baseUrl: http://username.github.io/project
+
+# Used to link to the GitHub project
+github:
+    user: myself
+    repo: my-project
+
+title: My project
+subTitle: This is a great project.
+
+# The left menu bar
+menu:
+    items:
+        home:
+            text: Home page
+            # You can use relative urls
+            relativeUrl: doc/faq.html
+        foo:
+            text: Another link
+            # Or absolute urls
+            absoluteUrl: https://example.com
+
+# The nav links
+navLinks:
+    items:
+        home:
+            text: Home page
+            # You can use relative urls
+            relativeUrl: doc/faq.html
+        foo:
+            text: Another link
+            # Or absolute urls
+            absoluteUrl: https://example.com
+            target: _blank</code></pre>
+<p>Note that the menu items can also contain HTML:</p>
+<pre><code class="language-yaml">home:
+    text: "&lt;i class=\"fa fa-github\"&gt;&lt;/i&gt; Home page"
+    relativeUrl: doc/faq.html</code></pre>
+<h2 id="menu">Menu</h2>
+<p>To set the current menu item (i.e. highlighted menu item), set the <code>currentMenu</code>
+key in the Markdown files:</p>
+<pre><code class="language-markdown">---
+currentMenu: home
+---
+
+# Welcome</code></pre>
+            </section>
+
+        </div>
+    </main>
+
+    <footer>
+        <div class="container-fluid">
+            <p class="text-muted">
+                website generated with <a href="http://couscous.io" title="Markdown website generator">Couscous</a>
+            </p>
+        </div>
+    </footer>
+
+    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    <script src="//yastatic.net/highlightjs/8.2/highlight.min.js"></script>
+
+    <script>
+    $(function() {
+        $("section>h1").wrap('<div class="page-header" />');
+        // Syntax highlighting
+        hljs.initHighlightingOnLoad();
+    });
+    </script>
+
+</body>
+</html>
