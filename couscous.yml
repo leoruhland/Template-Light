@@ -1,8 +1,7 @@
 template:
     directory: .
 
-exclude:
-    - .couscous
+baseUrl: http://leoruhland.github.io/cakemanager-couscous
 
 github:
     user: leoruhland
@@ -28,7 +27,7 @@ menu:
             relativeUrl:
         faq:
             text: FAQ
-            relativeUrl: 
+            relativeUrl:
 
 # The nav links
 navLinks:
