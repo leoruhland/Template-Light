@@ -44,9 +44,6 @@ h3 {
     font-size: 23px;
 }
 
-li {
-    margin-bottom: 3px;
-}
 
 #content img {
     max-width: 100%;
@@ -57,19 +54,34 @@ li {
 }
 
 header.navbar {
-    opacity: 0.9;
+    opacity: 1;
 }
 .navbar .navbar-brand {
-    font-size: 28px;
+    font-size: 20px;
     height: auto;
-    line-height: 40px;
-    margin-left: 20px;
+    line-height: 20px;
+}
+@media (min-width: 768px){
+    .navbar .navbar-brand {
+        font-size: 28px;
+        height: auto;
+        line-height: 40px;
+        margin-left: 20px;
+    }
 }
 .navbar .navbar-brand small {
     font-size: 18px;
     font-weight: 300;
     margin-left: 10px;
 }
+
+@media (min-width: 768px){
+    .navbar-nav>li>a {
+        padding-top: 26px;
+        padding-bottom: 26px;
+    }
+}
+
 
 @media (min-width: 768px) {
     #sidebar {
@@ -102,4 +114,9 @@ pre {
 }
 pre code {
     border: none;
+}
+
+.navbar-nav>li.fa-icon>a {
+    padding-top: 17.5px;
+    padding-bottom: 17.5px;
 }
